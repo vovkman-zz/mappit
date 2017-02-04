@@ -20,5 +20,9 @@
     "https://ajax.googleapis.com/",
     "https://maps.googleapis.com/"
   ],
+  "web_accessible_resources" : [
+    "injectionScript.js",
+    "content_script.js"
+  ],
   "icons": { "16": "icon.png"}
 }

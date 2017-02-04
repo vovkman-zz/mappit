@@ -5,8 +5,8 @@ function onClickHandler(info, tab) {
         console.log("mappit was clicked.");
         //alert(info["selectionText"]);
 
-        chrome.windows.create({"url" : "https://www.google.com/maps/embed/v1/place?key=AIzaSyBYrE1eJS0bbprf3-87rihnx-kYJcK40xI    &q=" + info["selectionText"],
-            "height" : 300, "width" : 500, "type" : "popup"})
+        chrome.tabs.executeScript(null, {file: "content_script.js"});
+
     }
 }
 
