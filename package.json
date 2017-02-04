@@ -1,7 +1,7 @@
 {
-  "name": "ReactExpressBoilerplate",
+  "name": "qhacks2017",
   "version": "1.0.0",
-  "description": "React-Express Boilerplate",
+  "description": "qhacks2017",
   "main": "client.js",
   "scripts": {
     "webpack-watch": "webpack -w",
@@ -36,7 +36,7 @@
     "postcss-smart-import": "^0.6.7",
     "precss": "^1.4.0",
     "style-loader": "^0.13.1",
-    "webpack": "2.1.0-beta"
+    "webpack": "^2.1.0"
   },
   "dependencies": {
     "babel-runtime": "^6.22.0",
