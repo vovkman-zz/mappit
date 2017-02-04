@@ -7,9 +7,8 @@ function onClickHandler(info, tab) {
         chrome.tabs.executeScript(tab.id, {
             code: 'var address = "' + info["selectionText"] + '";' // inject the address variable beforehand
         }, function() {
-            chrome.tabs.executeScript(tab.id, {file: 'content_script.js'});
+            chrome.tabs.executeScript(tab.id, {file: 'new_content_script.js'});
         });
-
     }
 }
 
@@ -24,7 +23,8 @@ chrome.runtime.onInstalled.addListener(function() {
 
 
 // HTML API key: AIzaSyBYrE1eJS0bbprf3-87rihnx-kYJcK40xI
-// JS API key: AIzaSyD0n19aMeQbPiWHFTc08PiNNjf4v7ZXgHQ
+// JS API key v1: AIzaSyD0n19aMeQbPiWHFTc08PiNNjf4v7ZXgHQ
+// JS API key v2: AIzaSyBWoNVGJjs5ycMz5t4jcoooClLGGwotOls
 
 
 

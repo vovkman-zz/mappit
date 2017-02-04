@@ -22,7 +22,10 @@
   ],
   "web_accessible_resources" : [
     "injectionScript.js",
-    "content_script.js"
+    "content_script.js",
+    "new_content_script.js",
+    "bundle.js",
+    "bundle.css"
   ],
   "icons": {
     "16": "icon.png",
