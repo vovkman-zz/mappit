@@ -1,9 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "qhacks2017 chrome extension",
-  "description": "Google maps popup",
+  "name": "mappit",
+  "description": "Adds a Google Maps popup window for quick location lookup.",
   "version": "1.0",
+
+  "background": {
+    "persistent": false,
+    "scripts": ["background.js"] },
 
   "browser_action": {
     "default_icon": "icon.png",
@@ -12,6 +16,9 @@
   },
   "permissions": [
     "activeTab",
-    "https://ajax.googleapis.com/"
-  ]
+    "contextMenus",
+    "https://ajax.googleapis.com/",
+    "https://maps.googleapis.com/"
+  ],
+  "icons": { "16": "icon.png"}
 }
