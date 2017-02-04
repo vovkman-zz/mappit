@@ -1,7 +1,26 @@
-var map;
+var geocoder, map;
+
 function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
+    geocoder = new google.maps.Geocoder();
+
+    window.addEventListener('message', function(event) {
+        var address = event.data.text;
+        console.log('Embedded javascript got message:', address);
+
+        geocoder.geocode({ 'address': address }, function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK) {
+                var myOptions = {
+                    zoom: 8,
+                    center: results[0].geometry.location
+                };
+                map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+                var marker = new google.maps.Marker({
+                    map: map,
+                    position: results[0].geometry.location
+                });
+            }
+        });
     });
 }
+

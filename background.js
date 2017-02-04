@@ -3,16 +3,19 @@
 function onClickHandler(info, tab) {
     if (info.menuItemId == "mappit") {
         console.log("mappit was clicked.");
-        //alert(info["selectionText"]);
 
-        chrome.tabs.executeScript(null, {file: "content_script.js"});
+        chrome.tabs.executeScript(tab.id, {
+            code: 'var address = "' + info["selectionText"] + '";' // inject the address variable beforehand
+        }, function() {
+            chrome.tabs.executeScript(tab.id, {file: 'content_script.js'});
+        });
 
     }
 }
 
 chrome.contextMenus.onClicked.addListener(onClickHandler);
 
-// Set up context menu tree at install time.
+// Set up context menu item at install time.
 chrome.runtime.onInstalled.addListener(function() {
     chrome.contextMenus.create({"title" : "mappit", "id": "mappit", "contexts" :["selection"]});
     console.log("Created mappit menu item.");
