@@ -2,8 +2,11 @@ var newDiv = document.createElement("div");
 newDiv.setAttribute("id", "mappit-unique-root");
 newDiv.setAttribute("class", "mappit-unique-root");
 
-var jQuery = document.createElement("script");
-jQuery.setAttribute("src", chrome.extension.getURL("jquery.js"));
+var initMap = document.createElement("script");
+initMap.setAttribute("src", chrome.extension.getURL("initMap.js"));
+
+var google = document.createElement("script");
+google.setAttribute("src", "https://maps.googleapis.com/maps/api/js?key=AIzaSyD0n19aMeQbPiWHFTc08PiNNjf4v7ZXgHQ&signed_in=true&callback=initMap");
 
 var bootstrapJs = document.createElement("script");
 bootstrapJs.setAttribute("src", "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js");
@@ -25,6 +28,7 @@ script.setAttribute("charset", "utf-8");
 (document.body || document.documentElement).appendChild(newDiv);
 (document.body || document.documentElement).appendChild(newLink);
 (document.body || document.documentElement).appendChild(script);
-(document.head || document.documentElement).appendChild(jQuery);
+(document.body || document.documentElement).appendChild(google);
+(document.head || document.documentElement).appendChild(initMap);
 (document.head || document.documentElement).appendChild(bootstrapJs);
 (document.head || document.documentElement).appendChild(bootstrapCss);

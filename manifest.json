@@ -12,15 +12,14 @@
   "permissions": [
     "activeTab",
     "contextMenus",
-    "https://ajax.googleapis.com/",
     "https://maps.googleapis.com/"
   ],
   "web_accessible_resources" : [
-    "injectionScript.js",
     "new_content_script.js",
     "bundle.js",
     "bundle.css",
-    "jquery.js"
+    "jquery.js",
+    "initMap.js"
   ],
   "icons": {
     "16": "icon.png",
