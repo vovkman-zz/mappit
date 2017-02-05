@@ -7,12 +7,7 @@
 
   "background": {
     "persistent": false,
-    "scripts": ["background.js"] },
-
-  "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html",
-    "default_title": "Swag Up"
+    "scripts": ["background.js"] 
   },
   "permissions": [
     "activeTab",
@@ -22,10 +17,10 @@
   ],
   "web_accessible_resources" : [
     "injectionScript.js",
-    "content_script.js",
     "new_content_script.js",
     "bundle.js",
-    "bundle.css"
+    "bundle.css",
+    "jquery.js"
   ],
   "icons": {
     "16": "icon.png",
