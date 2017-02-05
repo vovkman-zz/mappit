@@ -20,6 +20,12 @@ function initMap() {
                map: map,
                position: results[0].geometry.location
             });
+            var infoWindow = new google.maps.InfoWindow({
+                content: query
+            });
+            marker.addListener('click', function() {
+                infoWindow.open(map, marker);
+            });
         } else {
             var fail_node = document.createElement("div");
             fail_node.setAttribute("class", "map-fail jumbotron");
