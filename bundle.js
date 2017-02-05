@@ -10847,7 +10847,7 @@ var MapContainer = function (_Component) {
             style: {
                 position: 'absolute',
                 width: 500,
-                height: 500,
+                height: 350,
                 top: 0,
                 left: 0
             },
@@ -10974,7 +10974,7 @@ var MapContainer = function (_Component) {
                             position: 'absolute',
                             zIndex: 20,
                             width: 500,
-                            height: 500,
+                            height: 350,
                             left: mapClientX,
                             top: mapClientY
                         },
@@ -10995,7 +10995,7 @@ var MapContainer = function (_Component) {
                     position: 'absolute',
                     zIndex: 20,
                     width: 500,
-                    height: 500,
+                    height: 350,
                     left: mapClientX,
                     top: mapClientY
                 }
@@ -11036,14 +11036,13 @@ var MapContainer = function (_Component) {
                         onDrag: this.setPopUpLocation,
                         onDragEnd: this.setPopUpLocation,
                         className: 'map-bar well well-sm' },
-                    __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(
-                        'div',
-                        { className: 'map-title' },
-                        'mappit',
-                        __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('span', { onClick: this.deletePopUp, className: 'map-close glyphicon glyphicon-remove' })
-                    )
+                    __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('span', { onClick: this.deletePopUp, className: 'map-close glyphicon glyphicon-remove' })
                 ),
-                __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: 'map-wrapper container-fluid', id: 'map-wrapper' }),
+                __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement(
+                    'div',
+                    { className: 'map-wrapper container-fluid', id: 'map-wrapper' },
+                    __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('span', { onClick: this.deletePopUp, className: 'map-close glyphicon glyphicon-remove' })
+                ),
                 __WEBPACK_IMPORTED_MODULE_6_react___default.a.createElement('div', { className: 'map-details container-fluid' })
             );
         }
