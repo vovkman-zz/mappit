@@ -18,7 +18,10 @@ function initMap() {
 
             var marker = new google.maps.Marker({
                map: map,
-               position: results[0].geometry.location
+               place: {
+                location: results[0].geometry.location,
+                query: query
+                }
             });
             var infoWindow = new google.maps.InfoWindow({
                 content: query
