@@ -1,7 +1,7 @@
 /**
  * Created by liamvovk on 2017-02-05.
  */
-
+//
 function initMap() {
     var query = document.getSelection().toString();
     console.log(query);
