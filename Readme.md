@@ -13,5 +13,3 @@ Fredrick Leber: @fredrickleber
 Liam Vovk: @vovkman
 
 Nicolas Pennie: @NicolasPennie
-
-Mert Mumtaz: @Turkules
